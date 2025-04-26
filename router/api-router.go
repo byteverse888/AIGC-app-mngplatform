@@ -43,6 +43,7 @@ func SetApiRouter(router *gin.Engine) {
 			//userRoute.POST("/tokenlog", middleware.CriticalRateLimit(), controller.TokenLog)
 			userRoute.GET("/logout", controller.Logout)
 			userRoute.GET("/epay/notify", controller.EpayNotify)
+			userRoute.GET("/wechatpay/notify", controller.WechatPayNotify)
 			userRoute.GET("/groups", controller.GetUserGroups)
 
 			selfRoute := userRoute.Group("/")
@@ -56,7 +57,8 @@ func SetApiRouter(router *gin.Engine) {
 				selfRoute.GET("/token", controller.GenerateAccessToken)
 				selfRoute.GET("/aff", controller.GetAffCode)
 				selfRoute.POST("/topup", controller.TopUp)
-				selfRoute.POST("/pay", controller.RequestEpay)
+				//selfRoute.POST("/pay", controller.RequestEpay)
+				selfRoute.POST("/pay", controller.RequestPay)
 				selfRoute.POST("/amount", controller.RequestAmount)
 				selfRoute.POST("/aff_transfer", controller.TransferAffQuota)
 				selfRoute.PUT("/setting", controller.UpdateUserSetting)
