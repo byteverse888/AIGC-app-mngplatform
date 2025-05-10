@@ -7,7 +7,7 @@
 
 # New API
 
-🍥新一代大模型网关与AI资产管理系统
+🍥新一代大模型网关
 
 <a href="https://trendshift.io/repositories/8227" target="_blank"><img src="https://trendshift.io/api/badge/repositories/8227" alt="Calcium-Ion%2Fnew-api | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 
